@@ -49,6 +49,6 @@ jobs:
           pytest --cov-report=xml --cov=fastapi_mongodb_utils
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: SonarSource/sonarcloud-github-action@v3
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
