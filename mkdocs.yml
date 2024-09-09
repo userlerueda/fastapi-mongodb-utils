@@ -1,0 +1,24 @@
+repo_url: https://github.com/userlerueda/fastapi-mongodb-utils
+site_name: FastAPI MongoDB Utilities
+
+theme:
+  name: material
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            filters: ["!^_"]
+            preload_modules: [fastapi_mongodb_utils]
+            show_source: false
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+      default_handler: python
+
+nav:
+  - Home: index.md
+  - Tutorials: tutorials.md
+  - How-To Guides: how-to-guides.md
+  - Reference: reference.md
+  - Explanation: explanation.md

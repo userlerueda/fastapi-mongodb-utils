@@ -7,8 +7,17 @@ from typing import Collection
 
 from dateutil.parser import ParserError, parse
 
+
 def datetime_to_iso8601_with_z_suffix(value: datetime) -> str:
-    """Convert datetime to ISO 8601 with Z suffix."""
+    """
+    Convert datetime to ISO 8601 with Z suffix.
+
+    Args:
+        value (datetime): datetime object to be converted.
+
+    Returns:
+        str: ISO 8601 formatted datetime with Z suffix.
+    """
     if value.tzinfo is None:
         value = value.replace(tzinfo=timezone.utc)
     formatted_datetime: str = value.isoformat()
@@ -58,9 +67,18 @@ def normalize_str_datetime(value: str) -> str:
     return datetime_to_iso8601_with_z_suffix(str_to_datetime(value))
 
 
-def now(**kwargs) -> datetime:
-    """Get current datetime."""
-    now_datetime = datetime.now(timezone.utc)
+def now(tz: timezone = timezone.utc, **kwargs) -> datetime:
+    """
+    Get current datetime with timezone.
+
+    Args:
+        tz (timezone): timezone.
+        **kwargs (dict): Arbitrary keyword arguments that will be passed to timedelta.
+
+    Returns:
+        datetime: current datetime object with timezone and offset.
+    """
+    now_datetime = datetime.now(tz)
     if kwargs:
         now_datetime += timedelta(**kwargs)
     return now_datetime
