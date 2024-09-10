@@ -3,8 +3,14 @@ site_name: FastAPI MongoDB Utilities
 
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - search.highlight
+    - search.share
+    - search.suggest
 
 plugins:
+  - search
   - mkdocstrings:
       handlers:
         python:
