@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fastapi-mongodb-utils"
-version = "0.2.0-alpha.1"
+version = "0.2.0-alpha.2"
 description = "FastAPI utilities for MongoDB"
 authors = ["Luis Rueda <userlerueda@gmail.com>"]
 readme = "README.md"
@@ -30,8 +30,10 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
+fastapi = "^0"
+motor = "^3.2"
 python = "^3.10"
-python-dateutil = "^2.9.0.post0"
+python-dateutil = "^2.8"
 
 [tool.poetry.group.dev.dependencies]
 debugpy = "*"
@@ -50,7 +52,7 @@ mkdocs-material = "^9.5.34"
 mkdocstrings = { extras = ["python"], version = "^0.26.1" }
 
 [tool.pytest.ini_options]
-addopts = "-rA -s -vv --cov fastapi_mongodb_utils --cov-report xml:coverage.xml --cov-report term:skip-covered"
+addopts = "-rA -s -vv --cov fastapi_mongodb_utils --cov-report xml:coverage.xml --cov-report term-missing:skip-covered"
 testpaths = ["tests/unit"]
 log_cli = true
 log_cli_level = "INFO"
