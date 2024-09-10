@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fastapi-mongodb-utils"
-version = "0.2.0-alpha.2"
+version = "0.2.0"
 description = "FastAPI utilities for MongoDB"
 authors = ["Luis Rueda <userlerueda@gmail.com>"]
 readme = "README.md"

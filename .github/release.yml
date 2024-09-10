@@ -1,0 +1,30 @@
+changelog:
+  exclude:
+    labels:
+      - ignore
+      - ignore-for-release-notes
+  categories:
+    - title: Added
+      labels:
+        - added
+        - enhancement
+        - feature
+    - title: Fixed
+      labels:
+        - bug
+        - fixed
+    - title: Changed
+      labels:
+        - changed
+        - breaking-change
+    - title: Removed
+      labels:
+        - removed
+        - deprecates
+    - title: Chores
+      labels:
+        - chores
+        - dependencies
+    - title: Documentation
+      labels:
+        - documentation
