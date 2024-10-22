@@ -5,8 +5,8 @@ __email__ = "userlerueda@gmail.com, jlr060@gmail.com"
 import typing
 
 from fastapi import FastAPI, Request
-from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
-from pymongo import MongoClient
+from pymongo import AsyncMongoClient, MongoClient
+from pymongo.asynchronous.database import AsyncDatabase
 from pymongo.database import Database
 
 
@@ -14,8 +14,8 @@ class CustomFastAPI(FastAPI):
     """Custom FastAPI class."""
 
     # Async Client and Database
-    mongodb_aclient: AsyncIOMotorClient
-    adb: AsyncIOMotorDatabase
+    mongodb_aclient: AsyncMongoClient
+    adb: AsyncDatabase
 
     # Sync Client and Database
     mongodb_client: MongoClient
