@@ -49,7 +49,7 @@ ruff = "*"
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.6.1"
 mkdocs-material = "^9.5.42"
-mkdocstrings = { extras = ["python"], version = "^0.26.2" }
+mkdocstrings = { extras = ["python"], version = ">=0.26.2,<0.28.0" }
 
 [tool.pytest.ini_options]
 addopts = "-rA -s -vv --cov fastapi_mongodb_utils --cov-report xml:coverage.xml --cov-report term-missing:skip-covered"
